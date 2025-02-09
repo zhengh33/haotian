@@ -283,9 +283,6 @@ long$wave = rep(c(1,2,3),3713)
 
 ready %>% ggplot(aes(baselineHI)) +geom_bar(aes(fill = autonomy),position = "fill")
 
-long %>% ggplot(aes(autonomy)) +
-  geom_bar(aes(fill = obs),position  ="fill") + facet_grid(~baselineHI+wave)
-
 
 
 
@@ -341,14 +338,9 @@ lowtbl = geeglm(obs~age+PAEDUC+RACE+BIO_SEX+w2spt+w3spt+autonomy*age+EDUC,corstr
 tbl_regression(hightbl1)
 
 
-data.frame(age = 12:42, bmi = 22.65146562 + 0.3 * 12:42)
-
 
 
 tbl_regression(midtbl)
-
-data.frame(age = 12:42, bmi = 16.923579239 + 0.24 * 12:42)
-
 
 
 
